@@ -1,0 +1,76 @@
+/* Plats */
+#main_menu {
+  display: flex;
+  flex-direction: column;
+}
+.plats {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+.plat {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  border-radius: 1em;
+  margin: 1em 0;
+  background-color: white;
+  box-shadow: 0 10px 10px #c5c5c59d;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0;
+}
+.description_plat,
+.prix_plat {
+  box-sizing: border-box;
+  padding: 0.7em;
+  flex-shrink: 0;
+}
+/* ANIMATION: réduction de la taille du plat + rognage lors du survol */
+.description_plat {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition-property: width;
+  transition-duration: 500ms;
+}
+.prix_plat {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.texte_rognable,
+h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.coche {
+  width: 100px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #99e2d0;
+  border-radius: 0 1em 1em 0;
+}
+/* ANIMATION: retournement de l'icone de validation */
+.coche i {
+  transform: rotate(180deg);
+  transition-property: transform;
+  transition-delay: 200ms;
+  transition-duration: 500ms;
+}
+.plat:hover .description_plat {
+  width: 65%;
+}
+.plat:hover i {
+  transform: rotate(0deg);
+}
+/* Fin des plats */
+/* Fin des règles spécifiques aux pages de menus */
